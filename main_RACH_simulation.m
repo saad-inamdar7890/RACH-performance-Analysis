@@ -33,8 +33,7 @@ for t = 1:length(trafficPatterns)
         fprintf('Simulating %s traffic with %d devices...\n', trafficPattern, numDevices);
         
         % Run the RACH simulation
-        [accessSuccess, accessDelay, collisionProb, numRetransmissions, energyEfficiency, resourceUtilization] = ...
-            simulateRACH(config, numDevices, trafficPattern);
+        [accessSuccess, accessDelay, collisionProb, numRetransmissions, energyEfficiency, resourceUtilization] =   simulateRACH(config, numDevices, trafficPattern);
         
         % Store results
         results(t,d).trafficPattern = trafficPattern;
